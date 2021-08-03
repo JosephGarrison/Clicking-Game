@@ -28,15 +28,13 @@ namespace Clicking_Game
         public static Random rnd = new Random();
         public static DispatcherTimer timer = new DispatcherTimer();
 
-        public MainWindow()
-        {
+        public MainWindow(){
             InitializeComponent();
             timer.Tick += Timer_Tick;
             timer.Interval = new TimeSpan(0, 0, 1); //Set game clock to tick every second
         }
 
-        private void AddRectangle()
-        {
+        private void AddRectangle(){
             Rectangle temp = new Rectangle();
             temp.Width = 50;
             temp.Height = 50;
@@ -48,24 +46,20 @@ namespace Clicking_Game
             cnvGame.Children.Add(temp);
         }
 
-        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
-        {
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e){
             cnvGame.Children.Remove((Rectangle)sender);
             score++;
             txbScore.Text = "Score = " + score;
-            if (score >= highscore)
-            {
+            if (score >= highscore){
                 highscore = score;
                 txbHighScore.Text = "High Score = " + highscore;
             }
             AddRectangle();
         }
-        private void Timer_Tick(object sender, EventArgs e)
-        {
+        private void Timer_Tick(object sender, EventArgs e){
             time--;
             txbTime.Text = "Time: " + time;
-            if(time == 0)
-            {
+            if(time == 0){
                 timer.Stop();
                 cnvGame.Children.Clear();
                
@@ -76,7 +70,10 @@ namespace Clicking_Game
         {
             timer.Start();
             score = 0;
+            txbScore.Text = "Score = " + score;
             time = 10;
+            txbTime.Text = "Time: " + time;
+            cnvGame.Children.Clear();
             AddRectangle();
         }
     }

@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Clicking Game" Height="350" Width="525">
     <Grid>
-        <Canvas Name = "cnvGame" Width =" 500" Height ="280"></Canvas>
+        <Canvas Name = "cnvGame" Width =" 500" Height ="280"/>
         <Menu VerticalAlignment ="Top" HorizontalAlignment ="Left" Width=" 525" Height="25">
-            <MenuItem Header = "NewGame" Click = "MenuItem_Click" FontWeight="Bold" FontSize="14" ToolTip="Click here to restart " Height="28" Width="83"/>
+            <MenuItem Header = "NewGame" Click = "MenuItem_Click" FontWeight="Bold" FontSize="10" ToolTip="Click here to restart " Height="25" Width="84" Background="{x:Null}"/>
         </Menu>
-        <TextBlock Name = "txbScore" Text = "Score = 0" Margin = "229,1,195,0" FontWeight="Bold" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" Height="26"/>
-        <TextBlock Name = "txbTime" Text = "Time = 0" Margin = "110,0,301,0" FontWeight="Bold" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" Height="25"/>
-        <TextBlock Name = "txbHighScore" Text = "High Score = 0" Margin = "361,-1,19,0" FontWeight="Bold" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" Height="26"/>
+        <TextBlock Name = "txbScore" Text = "Score = 0" Margin = "230,5,194,0" FontWeight="Bold" FontSize="10" TextAlignment="Center" Height="15" VerticalAlignment="Top"/>
+        <TextBlock Name = "txbTime" Text = "Time = 0" Margin = "84,5,327,0" FontWeight="Bold" FontSize="10" TextAlignment="Center" Height="13" VerticalAlignment="Top"/>
+        <TextBlock Name = "txbHighScore" Text = "High Score = 0" Margin = "380,5,36,0" FontWeight="Bold" FontSize="10" TextAlignment="Center" Height="15" VerticalAlignment="Top"/>
     </Grid>
 </Window>
