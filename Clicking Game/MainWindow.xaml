@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clicking_Game"
         mc:Ignorable="d"
-        Title="Clicking Game" Height="450" Width="800">
+        Title="Clicking Game" Height="350" Width="525">
     <Grid>
-
+        <Canvas Name = "cnvGame" Width =" 500" Height ="280"></Canvas>
+        <Menu VerticalAlignment ="Top" HorizontalAlignment ="Left" Width=" 525" Height="25">
+            <MenuItem Header = "NewGame" Click = "MenuItem_Click" FontWeight="Bold" FontSize="14" ToolTip="Click here to restart " Height="28" Width="83"/>
+        </Menu>
+        <TextBlock Name = "txbScore" Text = "Score = 0" Margin = "229,1,195,0" FontWeight="Bold" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" Height="26"/>
+        <TextBlock Name = "txbTime" Text = "Time = 0" Margin = "110,0,301,0" FontWeight="Bold" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" Height="25"/>
+        <TextBlock Name = "txbHighScore" Text = "High Score = 0" Margin = "361,-1,19,0" FontWeight="Bold" FontSize="14" TextAlignment="Center" VerticalAlignment="Top" Height="26"/>
     </Grid>
 </Window>
